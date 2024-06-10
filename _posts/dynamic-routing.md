@@ -1,19 +1,50 @@
 ---
-title: "Dynamic Routing and Static Generation"
-excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/dynamic-routing/cover.jpg"
-date: "2020-03-16T05:35:07.322Z"
+title: "Copper access line Lincoln"
+excerpt: "This one tripped me up because it's a copper accesss line, but it has to be built in a fiber OE in lincoln, so it's in ZMS"
+coverImage: "/assets/blog/dynamic-routing/9164086576.PNG"
+date: "2024-06-09T05:35:07.322Z"
 author:
-  name: JJ Kasper
-  picture: "/assets/blog/authors/jj.jpeg"
+  name: Seven
+  picture: "/assets/blog/authors/welcome.jpg"
 ogImage:
   url: "/assets/blog/dynamic-routing/cover.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
+When you go to ZMS it's easier if you expand the 1U Products before you expand the MALCs/MXKs or collapse MALCs/MXKs. They usually fail in provisioning guessing maybe due to protocol as ADSL I’m not entirely sure.
+These we have to manually build the voice connections on the card and MALC. We may also need assignment to update to a compatible OE: A0660010158.
 
-Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidunt. Gravida in fermentum et sollicitudin ac orci phasellus egestas tellus. Volutpat consequat mauris nunc congue nisi vitae. Id aliquet risus feugiat in ante metus dictum at tempor. Sed blandit libero volutpat sed cras. Sed odio morbi quis commodo odio aenean sed adipiscing. Velit euismod in pellentesque massa placerat. Mi bibendum neque egestas congue quisque egestas diam in arcu. Nisi lacus sed viverra tellus in. Nibh cras pulvinar mattis nunc sed. Luctus accumsan tortor posuere ac ut consequat semper viverra. Fringilla ut morbi tincidunt augue interdum velit euismod.
+Go to prism first and select check the line card for the >> shelf management IP - make sure to select the active account at the top 
 
-## Lorem Ipsum
+![ZMS 1U Products](/assets/blog/dynamic-routing/prism_line_card.png)
 
-Tristique senectus et netus et malesuada fames ac turpis. Ridiculous mus mauris vitae ultricies leo integer malesuada nunc vel. In mollis nunc sed id semper. Egestas tellus rutrum tellus pellentesque. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Eros donec ac odio tempor orci dapibus ultrices. Aliquam sem et tortor consequat id porta nibh. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla. Diam vulputate ut pharetra sit amet. Ut tellus elementum sagittis vitae et leo. Arcu non odio euismod lacinia at quis risus sed vulputate.
+Now we can search all ZMS for that "management IP"
+
+![ZMS 1U Products](/assets/blog/dynamic-routing/zms2.png)
+
+Right click the shelf and choose >> Manage Voice Connections
+
+![manage voice connections](/assets/blog/dynamic-routing/manage_voice_connections.png)
+
+Then search for the phone number just in case it's already built. If no search result >>> click the add button
+
+
+![manage voice connections](/assets/blog/dynamic-routing/search_for_phone_number.png)
+
+![manage voice connections](/assets/blog/dynamic-routing/OE_IP.png)
+
+## Add Like this:
+
+- IP Interface = ipobridge-3000
+- Available POTS Ports = choose the Slot and Port you want dial tone built on (screenshot shows Slot 2, Port 10)
+- PLAR = Enabled
+- Directory Number = Cust telephone nuumber
+- User Name = tells us what VDSL shelf/card/port this cust is on
+
+- Shelf name (change space to an underscore) + Card # (2 digits) + Port # (2 digits)
+- for example, if you are on CTHTCAJK HX2 CARD 02 PORT 10, username= CTHTCAJK_HX20210
+- PLAR Address = IP of the voip gateway -- see chart above
+
+
+![manage voice connections](/assets/blog/dynamic-routing/add2.png)
+
+
