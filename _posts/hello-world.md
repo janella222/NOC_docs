@@ -1,5 +1,5 @@
 ---
-title: 'We are looking for the following "ONU"'
+title: 'We are looking for an "ONU" with the following'
 excerpt: "Example ONU: EKGVCAROHXO / 10.40.57.130 SLOT 2 OLT 3 ONU 10 - this is one that we are going to image we got a trouble-ticket for and tested it and we need to check something or attempt a resync, reboot, default, send update to ONT etc. in ZMS"
 coverImage: "/assets/blog/hello-world/testboard.PNG"
 date: "2020-03-16T05:35:07.322Z"
