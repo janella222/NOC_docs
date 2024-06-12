@@ -1,7 +1,7 @@
 ---
 title: "VDSL - the John Snow of Internet connections"
 excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus."
-coverImage: "/assets/blog/vdsl/testboard_summary_ex1.png"
+coverImage: "https://github.com/janella222/NOC_docs/blob/4a16262b0b2e7beb5ec79b2bba93633a15386777/public/assets/blog/nms/2524_system.PNG"
 date: "2020-03-16T05:35:07.322Z"
 author:
   name: Seven
@@ -9,6 +9,12 @@ author:
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
+
+![ZMS 1U Products](https://github.com/janella222/NOC_docs/blob/4a16262b0b2e7beb5ec79b2bba93633a15386777/public/assets/blog/nms/2524_system.PNG)
+
+
+
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.
 
