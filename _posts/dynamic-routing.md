@@ -1,7 +1,7 @@
 ---
 title: "Copper access line Lincoln"
 excerpt: "This one tripped me up because it's a copper accesss line, but it has to be built in a fiber OE in lincoln, so it's in ZMS"
-coverImage: "/assets/blog/dynamic-routing/9164086576.PNG"
+coverImage: "/assets/blog/dynamic-routing/_9164086576.jpeg"
 date: "2024-06-09T05:35:07.322Z"
 author:
   name: Seven
@@ -15,22 +15,22 @@ These we have to manually build the voice connections on the card and MALC. We m
 
 Go to prism first and select check the line card for the >> shelf management IP - make sure to select the active account at the top 
 
-![ZMS 1U Products](/assets/blog/dynamic-routing/prism_line_card.png)
+![ZMS 1U Products](/assets/blog/dynamic-routing/_prism_line_card.jpg)
 
 Now we can search all ZMS for that "management IP"
 
-![ZMS 1U Products](/assets/blog/dynamic-routing/zms2.png)
+![ZMS 1U Products](/assets/blog/dynamic-routing/_zms2.jpg)
 
 Right click the shelf and choose >> Manage Voice Connections
 
-![manage voice connections](/assets/blog/dynamic-routing/manage_voice_connections.png)
+![manage voice connections](/assets/blog/dynamic-routing/_manage_voice_connections.jpg)
 
 Then search for the phone number just in case it's already built. If no search result >>> click the add button
 
 
-![manage voice connections](/assets/blog/dynamic-routing/search_for_phone_number.png)
+![manage voice connections](/assets/blog/dynamic-routing/_search_for_phone_number.jpg)
 
-![manage voice connections](/assets/blog/dynamic-routing/OE_IP.png)
+![manage voice connections](/assets/blog/dynamic-routing/_OE_IP.jpg)
 
 ## Add Like this:
 
@@ -45,6 +45,6 @@ Then search for the phone number just in case it's already built. If no search r
 - PLAR Address = IP of the voip gateway -- see chart above
 
 
-![manage voice connections](/assets/blog/dynamic-routing/add2.png)
+![manage voice connections](/assets/blog/dynamic-routing/_add2.jpg)
 
 
